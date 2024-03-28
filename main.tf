@@ -1,3 +1,16 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "5.42.0"
+    }
+  }
+}
+
+provider "aws" {
+  # Configuration options
+}
+
 resource "aws_iam_user" "admin-user" {
   name = "lucy"
   tags = {
