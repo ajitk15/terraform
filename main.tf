@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 resource "aws_iam_user" "admin-user" {
-  name = "lucy"
+  name = "testUser"
   tags = {
     Decription = "Technical Team Leader"
   }
