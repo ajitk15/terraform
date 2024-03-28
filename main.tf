@@ -14,18 +14,14 @@ provider "aws" {
 }
 
 resource "aws_iam_user" "admin-user" {
-  name = "testUser"
+  name = "testUser1"
   tags = {
     Decription = "Technical Team Leader"
   }
 }
 
-resource "aws_iam_policy" "adminUser" {
-  name = "AdminUsers"
-  policy =  file("admin-policy.json")
-}
-
-resource "aws_iam_user_policy_attachment" "lucy-admin-access" {
-  user = aws_iam_user.admin-user.name
+resource "aws_iam_policy_attachment" "lucy-admin-access" {
+  name       = file("admin-policy.json")
+  users      = aws_iam_user.admin-user.name
   policy_arn = aws_iam_policy.adminUser.arn
 }
