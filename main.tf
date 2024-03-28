@@ -1,18 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "5.42.0"
-    }
-  }
-}
-
-provider "aws" {
-  region     = var.AWS_REGION
-  access_key = var.AWS_ACCESS_KEY_ID
-  secret_key = var.AWS_SECRET_ACCESS_KEY
-}
-
 resource "aws_iam_user" "admin-user" {
   name = "testUser1"
   tags = {
@@ -20,8 +5,8 @@ resource "aws_iam_user" "admin-user" {
   }
 }
 
-resource "aws_iam_policy_attachment" "lucy-admin-access" {
+resource "aws_iam_policy_attachment" "admin-access" {
   name       = file("admin-policy.json")
   users      = aws_iam_user.admin-user.name
-  policy_arn = aws_iam_policy.adminUser.arn
+  policy_arn = arn:aws:iam::058264085477:policy/AdminUsers
 }
