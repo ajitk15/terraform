@@ -12,4 +12,5 @@ variable "AWS_REGION" {
 
 variable "TFC_VAR_USER_NAME" {
     type = string
+    default = ""
 }
