@@ -1,5 +1,5 @@
 resource "aws_iam_user" "admin-user" {
-  name = vars.userName
+  name = var.userName
   tags = {
     Decription = "Technical Team Leader"
   }
