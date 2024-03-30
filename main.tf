@@ -3,7 +3,7 @@ locals {
 }
 
 resource "aws_iam_user" "admin-user" {
-  name = local.username
+  name = var.VAR_USER_NAME
   tags = {
     Decription = "Technical Team Leader"
   }
