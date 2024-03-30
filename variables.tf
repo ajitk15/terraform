@@ -10,6 +10,4 @@ variable "AWS_REGION" {
   default = ""
 }
 
-variable "userName" {
-  default = ""
-}
+variable "userName" {}
