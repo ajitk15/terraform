@@ -1,5 +1,5 @@
 resource "aws_iam_user" "admin-user" {
-  name = var.userName
+  name = var.TFC_USER_NAME
   tags = {
     Decription = "Technical Team Leader"
   }
