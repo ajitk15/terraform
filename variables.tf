@@ -17,4 +17,5 @@ variable "username" {
 
 variable "TFC_VAR_USER_NAME" {
     type = string
+    default = ""
 }
