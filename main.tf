@@ -1,7 +1,3 @@
-locals {
-  username = var.TFC_VAR_USER_NAME
-}
-
 resource "aws_iam_user" "admin-user" {
   name = var.VAR_USER_NAME
   tags = {
