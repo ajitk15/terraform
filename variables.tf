@@ -10,6 +10,6 @@ variable "AWS_REGION" {
   default = ""
 }
 
-variable "TFC_USER_NAME" {
+variable "TFC_VAR_USER_NAME" {
     default = ""
 }
